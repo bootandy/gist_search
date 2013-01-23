@@ -1,0 +1,21 @@
+<html>
+<body>
+    <h1>Welcome to Intuitive Gist Search</h1>
+    <p>Enter your github username:
+        <form id="lookup-form">
+            <input id='username' type='textbox'>
+            <button onclick='go()'>go!</button>
+        </form>
+    </p>
+
+    <script>
+        function go() {
+            document.getElementById('lookup-form').onsubmit = function() {
+                window.location = '/gists/user/' + document.getElementById('username').value;
+                return false;
+            };
+        }
+    </script>
+
+    </body>
+</html>
