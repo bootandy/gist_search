@@ -1,62 +1,30 @@
 from flask import request
-from flask import Flask
-from flask import jsonify
-from flask.ext.classy import FlaskView
+from flask import Flask, render_template
 from random import choice
 import requests
+
 
 app = Flask(__name__)
 
 
-class GistsView(FlaskView):
-
-    def user(self, user):
-        result = """
-            <html>
-            <body>
-                <h1>Intuitive Gist Search for """+ user + """</h1>
-                <p> Note the URL /\ above - bookmark it!
-                </p>
-
-                <p>Search my Gists:
-                    <form id="lookup-form">
-                        <input id='search_term' type='textbox'>
-                        <button onclick='go()'>search</button>
-                    </form>
-                </p>
-
-                <script>
-                    function go() {
-                        document.getElementById('lookup-form').onsubmit = function() {
-                            window.location = '/gists/""" + user + """/' + document.getElementById('search_term').value;
-                            return false;
-                        };
-                    }
-                </script>
-
-                </body>
-            </html>
-        """
-        return result
-
-    def index(self, user, search):
-        result = ''
+@app.route("/user/<user>", methods=['GET', 'POST'])
+def user(user):
+    if request.method == 'POST':
+        search = request.form['search_term'].lower()
         r = requests.get('https://api.github.com/users/'+user+'/gists')
 
         if r.ok:
+            gists = []
             raw_gists = r.json()
-            result = '<h1>' + user + ' gists</h1><h2>search for ' + search + '</h2>'
-
             for gist in raw_gists:
-                if search.lower() in gist['files'].keys()[0].lower() or search in gist['description'].lower():
-                    result += '<p><a href="' + gist['html_url'] + '">' + gist['files'].keys()[0] + '</a> : ' + gist['description'] + ' : ' + '</p>'
+                if search in gist['files'].keys()[0].lower() or search in gist['description'].lower():
+                    gists.append(gist)
+
+            return render_template('search.html', user=user, search_term=search, gists=gists)
         else:
-            result = ':-( something went wrong. I asked for: ' + r.url
+            return ':-( something went wrong. I asked for: ' + r.url
 
-        return result
-
-
-GistsView.register(app)
+    return render_template('search.html', user=user, search_term='')
 
 
 if __name__ == '__main__':
@@ -66,7 +34,7 @@ if __name__ == '__main__':
         from werkzeug import SharedDataMiddleware
         import os
         app.wsgi_app = SharedDataMiddleware(app.wsgi_app, {
-          '/': os.path.join(os.path.dirname(__file__), 'static')
+          '/': os.path.join(os.path.dirname(__file__), 'static'),
         })
 
     app.run('127.0.0.1', 5001)

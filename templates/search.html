@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Gist Search</title>
+<link rel="shortcut icon" type="image/x-icon" href="/static/assets/images/color/green/favicon.ico" />
+
+<!-- Stylesheets -->
+<link href="/static/assets/css/style3.css" rel="stylesheet" type="text/css" />
+
+<!--[if IE]>
+<link href="/static/assets/css/ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!-- JQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script type="text/javascript" src="/static/assets/js/cufon-yui.js"></script>
+<script type="text/javascript" src="/static/assets/js/eurostile.font.js"></script>
+
+<script type="text/javascript" src="/static/assets/js/custom.js"></script>
+
+</head>
+
+<body>
+
+    <div id="parent">
+        <div id="preheader">
+
+            <div id="header-small">
+                <div id="header-inner-sunrise"></div>
+
+                <div id="header-inner">
+                    <h1>Welcome to Intuitive Gist Search {{user}}</h1>
+                    <p class="sub">Note the URL /\ above - bookmark it!</p>
+                </div><!-- End "header-inner" -->
+            </div><!-- End "header" -->
+        </div>
+
+        <div id="content">
+            <div id="content-inner">
+                <div class="row">
+                    <form id="lookup-form" method='post'>
+                        <label>Search my Gists:</label>
+                        <input name='search_term' id='search_term' type='textbox' value="{{search_term}}">
+                        <input name='user' type='hidden' value='{{user}}'>
+                        <button class='btn btn-action' onclick='go()'> Go </button>
+                    </form>
+                </div>
+                <div class="row">
+                    {% if gists|length == 0 and search_term != '' %}
+                        <p> No Gists found </p>
+                    {% endif %}
+
+                    {% for gist in gists %}
+                         <p><a href="{{gist["html_url"]}}"> {{gist['files'].keys()[0]}} + </a> : {{gist['description']}} </p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div><!-- End "content" -->
+
+    </div><!-- End "parent" -->
+
+    <div id="bottom" class="row">
+    </div>
+
+    <div id="footer">
+
+        <div id="copyright">
+
+            <p>A Nuclear Carrot production. All Rights Reserved.</p>
+            <ul>
+                <li><a href="http://www.nuclearcarrot.com">Nuclear Carrot</a></li>
+            </ul>
+
+        </div><!-- End "copyright" -->
+
+        <ul id="social">
+
+            <li><a title="Delicious" class="tipsy" href="#"><img src="/static/assets/images/delicious-icon.png" alt="Delicious" /></a></li>
+            <li><a title="Tumbler" class="tipsy" href="#"><img src="/static/assets/images/tumblr-icon.png" alt="Tumbler" /></a></li>
+            <li><a title="Facebook" class="tipsy" href="#"><img src="/static/assets/images/facebook-icon.png" alt="Facebook" /></a></li>
+            <li><a title="Twitter" class="tipsy" href="#"><img src="/static/assets/images/twitter-icon.png" alt="Twitter" /></a></li>
+
+        </ul><!-- End "social" -->
+
+    </div><!-- End "footer" -->
+
+<script type="text/javascript"> Cufon.now(); </script>
+</body>
+
+</html>

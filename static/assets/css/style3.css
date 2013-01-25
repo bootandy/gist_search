@@ -1,0 +1,753 @@
+/*
+
+File: style.css
+
+For: Landed!
+Author: Luke Smith - HisHandiwork.biz
+Created: 02/21/11
+Theme: Green
+
+*/
+
+
+
+/* Import Stylesheets */
+
+@import 'reset.css';
+
+/* Import Stylesheets */
+
+
+
+/********************************************
+* MAIN                                      *
+********************************************/
+
+body {
+	font-family: 'Helvetica';
+	color: #000;
+	background: #eee;
+}
+
+p {
+	line-height: 1.5em;
+	padding: 5px 0;
+	clear: both;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+}
+
+h1, h2, h3 {
+	font-family: 'Georgia';
+	margin: 10px 0;
+}
+
+h4, h5, h6 {
+	padding: 5px 0;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 24px;
+	color: #000;
+	line-height: .8em;
+	padding: 10px 0;
+}
+
+h3 {
+	padding: 3px 0;
+}
+
+h4 {
+	font-size: 14px;
+	font-style: italic;
+}
+
+h5 {
+	font-size: 12px;
+	font-weight: lighter;
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: 10px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	line-height: 1.4em;
+	padding: 3px 0;
+}
+
+a, p, textarea, input[type=text] {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+
+/********************************************
+* MAIN                                      *
+********************************************/
+
+
+
+/********************************************
+* BUTTONS                                   *
+********************************************/
+
+.btn {
+	font-weight: bold;
+	text-align: center;
+	margin-top: 15px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.btn:active {
+	margin-top: 16px;
+}
+
+.btn-action {
+	width: 136px;
+	height: 45px;
+	color: #3b4e06;
+	font-size: 20px;
+	line-height: 40px;
+	background: url(../images/color/green/btn-1.png) top left no-repeat;
+}
+
+.btn-action:hover {
+
+	background: url(../images/color/green/btn-1.png) bottom left no-repeat;
+}
+
+.btn-gray {
+	width: 136px;
+	height: 45px;
+	color: #555555;
+	font-size: 20px;
+	line-height: 40px;
+	background: url(../images/btn-2.png) top left no-repeat;
+}
+
+a.btn-gray:hover {
+	background: url(../images/btn-2.png) bottom left no-repeat;
+}
+
+a.btn-2 {
+	width: 82px;
+	height: 28px;
+	color: #3b4e06 !important;
+	font-size: 12px;
+	line-height: 25px;
+	padding-left: 1px;
+	display: block;
+	position: relative;
+	background: url(../images/color/green/btn-small.png) top left no-repeat;
+}
+
+a.btn-2:hover {
+	background: url(../images/color/green/btn-small.png) bottom left no-repeat;
+}
+
+/********************************************
+* BUTTONS                                   *
+********************************************/
+
+
+
+/********************************************
+* TOP                                       *
+********************************************/
+
+div#top {
+	width: auto;
+	height: 50px;
+	background: transparent url(../images/bg-top.png) top left repeat-x;
+}
+
+div#top-inner {
+	width: 980px;
+	margin: 0 auto;
+}
+
+div#top .logo {
+	font-size: 30px;
+	display: block;
+	margin: 0;
+	padding-top: 5px;
+	float: left;
+}
+
+div#top .number {
+	display: block;
+	float: right;
+	padding-top: 8px;
+}
+
+div#top .number span {
+	padding-right: 5px;
+}
+
+
+/********************************************
+* TOP                                       *
+********************************************/
+
+
+
+/********************************************
+* HEADER                                    *
+********************************************/
+
+div#preheader {
+	width: auto;
+	background: url(../images/color/green/bg-header.png) repeat-x;
+}
+
+div#header {
+	width: auto;
+	height: 370px;
+	background: url(../images/color/green/bg-header-inner.jpg) no-repeat;
+}
+
+div#header-small {
+	width: auto;
+	height: 120px;
+	background: url(../images/color/green/bg-header-inner.jpg) no-repeat;
+}
+
+#gist_shot {
+	padding-top: 30px;
+	width:460px;
+}
+
+div#header-inner {
+	width: 980px;
+	margin: 0 auto;
+	padding-top: 1px;
+	/*background: url(../images/color/green/bg-header-inner.jpg) top center no-repeat;*/
+}
+
+.slider-wrap {
+	width: 345px;
+	height: 305px;
+	position: absolute;
+	margin: 40px 0 0 20px;
+	padding: 15px 0 0 15px;
+	background: url(../images/imac.png) top left no-repeat;
+}
+
+div#rotator {
+	width: 510px;
+	height: 200px;
+	float: right;
+}
+
+p.sub {
+	font-size: 18px;
+	font-weight: bold;
+	color: #e7f9Bb;
+	padding-bottom: 5px;
+}
+
+
+div#info {
+	display: none;
+}
+
+div#infobox {
+	width: 500px;
+	height: 100px;
+}
+
+/********************************************
+* HEADER                                    *
+********************************************/
+
+
+
+/********************************************
+* CONTENT                                   *
+********************************************/
+
+div#content {
+	width: auto;
+	min-height: 400px;
+	height: auto;
+	clear: both;
+	padding: 15px 0;
+	overflow: hidden;
+	background: #eee url(../images/bg-gradient.jpg) top left repeat-x;
+}
+
+div#content-inner {
+	width: 980px;
+	height: auto;
+	margin: 0 auto;
+}
+
+div#content-inner a {
+	color: #d68e1d;
+	text-decoration: none;
+}
+
+div#content-inner a:hover {
+	color: #f8b752;
+	text-decoration: underline;
+}
+
+div.row {
+	width: auto;
+	height: auto;
+	position: relative;
+	padding-bottom: 10px;
+}
+
+.hidden {
+	display: none;
+}
+
+div#fancybox-content, .textbox {
+	padding: 0;
+	background: #fff
+}
+
+.textbox {
+	width: 500px !important;
+	margin: 0 10px;
+}
+
+.textbox h2 {
+	color: #000;
+	padding: 0;
+}
+
+.textbox h4 {
+	font-size: 12px;
+	color: #777;
+	margin: -5px 0 5px 0;
+	padding: 0;
+}
+
+.textbox p {
+	color: #444;
+	padding: 10px 0;
+}
+
+.textbox img {
+	margin: 5px 15px;
+}
+
+/*** Begin Row 1 - DESCRIPTIONS ***/
+
+ul#descriptions {
+	width: 980px;
+	min-height: 185px;
+	margin-bottom: 20px;
+}
+
+ul#descriptions li {
+	width: 320px;
+	height: auto;
+	float: left;
+	margin-left: 10px;
+}
+
+ul#descriptions li:first-child {
+	margin-left: 0 !important;
+}
+
+ul#descriptions li img, ul#descriptions li div {
+	float: left;
+}
+
+ul#descriptions li div {
+	margin-left: 15px;
+}
+
+ul#descriptions li div p {
+	color: #999;
+	padding: 0;
+}
+
+ul#descriptions li > p {
+	color: #555;
+	padding: 10px 0 0 0;
+}
+
+ul#descriptions li h2 {
+	margin: 7px 0 0 0;
+	padding-bottom: 2px;
+}
+
+/*** Begin Row 2 - IMAGE SET ***/
+
+ul#image-set li {
+	width: 174px;
+	height: 144px;
+	margin-left: 20px;
+	padding: 6px 0 0 6px;
+	float: left;
+	position: relative;
+	display: block;
+	background: url(../images/image-block.png) top left no-repeat;
+}
+
+ul#image-set li:first-child {
+	margin-left: 0 !important;
+}
+
+ul#image-set li a {
+	width: 165px;
+	height: 130px;
+}
+
+ul#image-set li span {
+	width: 70px;
+	height: 40px;
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	margin-right: 3px;
+	z-index: 100;
+}
+
+span.vimeo {
+	background: url(../images/ribbon-vimeo.png) top left no-repeat;
+
+}
+
+span.youtube {
+	background: url(../images/ribbon-youtube.png) top left no-repeat;
+
+}
+
+span.flash {
+	background: url(../images/ribbon-flash.png) top left no-repeat;
+
+}
+
+a.f-image {
+	margin: 0;
+	padding: 0;
+	display: block;
+	position: relative;
+	background: #fff url(../images/image-zoom.png) center center no-repeat;
+}
+
+a.f-video {
+	margin: 0;
+	padding: 0;
+	display: block;
+	position: relative;
+	background: #fff url(../images/video-zoom.png) center center no-repeat;
+}
+
+a.f-flash {
+	margin: 0;
+	padding: 0;
+	display: block;
+	position: relative;
+	background: #fff url(../images/flash-zoom.png) center center no-repeat;
+}
+
+/*** Begin Row 3 - FEEDBACK/SUBSCRIBE ***/
+
+div#bottom {
+	width: 100%;
+	height: 25px;
+	padding-bottom: 0;
+	background: url(../images/bg-edit.jpg) top left repeat-x;
+}
+
+div#bottom-inner {
+	width: 980px;
+	height: 215px;
+	margin: 5px auto 0 auto;
+	padding-top: 40px;
+}
+
+/* FEEDBACK */
+
+ul#feedback {
+	height: 135px;
+	margin-bottom: 10px;
+}
+
+ul#feedback li {
+	width: 300px;
+	height: 100px;
+	float: left;
+	margin-left: 35px;
+}
+
+ul#feedback li:first-child {
+	margin-left: 0;
+}
+
+ul#feedback li p, ul#feedback li h4 {
+	text-align: center;
+}
+
+ul#feedback li p {
+	color: #999999;
+	font-style: italic;
+}
+
+ul#feedback li h4 {
+	color: #000;
+	font-style: none !important;
+}
+
+ul#feedback li h4 span {
+	font-weight: normal;
+}
+
+/* SUBSCRIBE */
+
+div#subscribe h2 {
+	color: #89b51c;
+	margin-top: 12px;
+	float: left;
+}
+
+div#subscribe form {
+	float: right;
+	margin-top: 18px;
+	display: block;
+}
+
+div#subscribe form input {
+	float: left;
+}
+
+
+div#subscribe form input[type=text] {
+	width: 254px;
+	height: 25px;
+	line-height: 32px;
+	vertical-align: middle;
+	margin-right: 10px;
+	padding: 9px 10px 0 10px;
+	border: none;
+	background: url(../images/subscribe-box.png) top left no-repeat;
+}
+
+div#subscribe form button[type=submit] {
+	width: 118px;
+	height: 34px;
+	font-size: 16px;
+	margin-top: 0px;
+	padding-bottom: 10px;
+	color: #3b4e06 !important;
+	line-height: 22px;
+	vertical-align: middle;
+	background: url(../images/color/green/btn-sub.png) top left no-repeat;
+}
+
+div#subscribe form button[type=submit]:hover {
+	background: url(../images/color/green/btn-sub.png) bottom left no-repeat;
+}
+
+.btn-small:active {
+	margin-top: 1px !important;
+}
+
+
+/********************************************
+* CONTENT                                   *
+********************************************/
+
+
+
+/********************************************
+* CONTACT PAGE                              *
+********************************************/
+
+div#header2 {
+	width: auto;
+	height: 240px;
+	background: url(../images/color/green/bg-header2.png) repeat-x;
+}
+
+div#header2-inner {
+	width: 980px;
+	height: 240px;
+	margin: 0 auto;
+	background: url(../images/color/green/bg-header2-inner.jpg) top center no-repeat;
+}
+
+div#header2 h1 {
+	margin: 0;
+	text-align: center;
+	padding-top: 45px;
+}
+
+div#sidebar,
+div#right {
+	float: left;
+}
+
+div#sidebar p,
+div#right p {
+	color: #444;
+}
+
+div#sidebar {
+	width: 255px;
+	min-height: 516px;
+	margin-right: 20px;
+	padding: 0 80px 0 0;
+	background: url(../images/vert-divider.png) center right no-repeat;
+}
+
+ul.emails {
+	margin: 15px 0;
+}
+
+ul.emails li {
+	padding-bottom: 10px;
+}
+
+ul.emails p {
+	padding: 0;
+	margin: 0;
+}
+
+div#right {
+	margin-bottom: 10px;
+}
+
+/* Form */
+
+#contact-form li label {
+	color: #89b51c;
+	font-size: 14px;
+	font-weight: bold;
+	min-width: 105px;
+	display: block;
+	margin: 15px 0 5px 2px;
+}
+
+#contact-form li input[type=text] {
+	width: 254px;
+	height: 25px;
+	line-height: 32px;
+	vertical-align: middle;
+	margin-right: 10px;
+	padding: 9px 10px 0 10px;
+	border: none;
+	background: url(../images/subscribe-box.png) top left no-repeat;
+}
+
+#contact-form li textarea {
+	width: 434px;
+	height: 144px;
+	background: url(../images/textarea.png) top left no-repeat;
+	border: none;
+	outline: none;
+}
+
+#contact-form button:active {
+	margin-top: 15px;
+}
+
+/********************************************
+* CONTACT PAGE                              *
+********************************************/
+
+input {
+	font-size: 20px;
+	padding: 10px 14px;
+	width: 260px;
+	background: white;
+	border: solid 1px;
+	border-color: #ADADAD #D8D8D8 #D8D8D8;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: left;
+	clear: none;
+}
+
+/********************************************
+* FOOTER                                    *
+********************************************/
+
+div#footer {
+	width: 980px;
+	height: 40px;
+	clear: both;
+	margin: 0 auto;
+	padding: 20px 0 0 0;
+	overflow: hidden;
+	color: #797979;
+}
+
+div#footer p, div#footer a, div#footer li {
+	font-size: 11px;
+	line-height: 1em;
+	padding: 0;
+}
+
+/* COPYRIGHT */
+
+div#copyright {
+	float: left;
+}
+
+div#copyright p {
+	color: #b0b0b0;
+	float: left;
+}
+
+div#copyright ul {
+	width: 530px;
+	height: 20px;
+	float: left;
+	margin-left: 5px;
+}
+
+div#copyright ul li {
+	height: 10px;
+	line-height: 10px;
+	float: left;
+	padding: 0 6px;
+	border-left: 1px solid #797979;
+}
+
+div#copyright ul li a {
+	color: #777;
+}
+
+div#copyright ul li a:hover {
+	text-decoration: underline;
+}
+
+/* SOCIAL */
+
+ul#social {
+	width: 100px;
+	float: right;
+}
+
+ul#social li {
+	float: right;
+	margin-left: 5px;
+}
+
+ul#social li a {
+	width: 16px;
+	height: 16px;
+	display: block;
+}
+
+/********************************************
+* FOOTER                                    *
+********************************************/

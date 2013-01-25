@@ -1,21 +1,111 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Gist Search</title>
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/color/green/favicon.ico" />
+
+<!-- Stylesheets -->
+<link href="assets/css/style3.css" rel="stylesheet" type="text/css" />
+
+<!--[if IE]>
+<link href="assets/css/ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!-- JQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/cufon-yui.js"></script>
+<script type="text/javascript" src="assets/js/eurostile.font.js"></script>
+
+<script type="text/javascript" src="assets/js/custom.js"></script>
+
+</head>
+
 <body>
-    <h1>Welcome to Intuitive Gist Search</h1>
-    <p>Enter your github username:
-        <form id="lookup-form">
-            <input id='username' type='textbox'>
-            <button onclick='go()'>go!</button>
-        </form>
-    </p>
 
-    <script>
-        function go() {
-            document.getElementById('lookup-form').onsubmit = function() {
-                window.location = '/gists/user/' + document.getElementById('username').value;
-                return false;
-            };
-        }
-    </script>
+    <div id="parent">
+        <div id="preheader">
 
-    </body>
+        <div id="header">
+            <div id="header-inner-sunrise"></div>
+
+            <div id="header-inner">
+
+                <img id='gist_shot' src='assets/images/gist_screenshot_text.png' />
+
+                <div id="rotator">
+
+                    <h1> Intuitive Gist Search</h1>
+                    <p class="sub"><b>The problem:</b> Gist search works by searching the gist text. But I organise my gists by filename and description</p>
+                    <p class="sub"><b>Solution:</b> Search by filename and description</p>
+
+                </div><!-- End "rotator" -->
+
+            </div><!-- End "header-inner" -->
+
+        </div><!-- End "header" -->
+        </div>
+
+        <div id="content">
+
+            <div id="content-inner">
+
+<!--                <div class="row">
+                    <img src='assets/images/gist_screenshot_text.png' />
+                </div>
+ -->
+                <div class="row">
+                    <h2> Start searching gist by filename and description</h2>
+
+                    <p>Enter your github username:
+                        <form id="lookup-form">
+                            <input id='username' type='textbox'>
+                            <button class='btn btn-action' onclick='go()'> Go </button>
+                        </form>
+                    </p>
+
+                </div>
+            </div>
+
+        </div><!-- End "content" -->
+
+    </div><!-- End "parent" -->
+
+    <div id="bottom" class="row">
+    </div>
+
+    <div id="footer">
+
+        <div id="copyright">
+
+            <p>A Nuclear Carrot production. All Rights Reserved.</p>
+            <ul>
+                <li><a href="http://www.nuclearcarrot.com">Nuclear Carrot</a></li>
+            </ul>
+
+        </div><!-- End "copyright" -->
+
+        <ul id="social">
+
+            <li><a title="Delicious" class="tipsy" href="#"><img src="assets/images/delicious-icon.png" alt="Delicious" /></a></li>
+            <li><a title="Tumbler" class="tipsy" href="#"><img src="assets/images/tumblr-icon.png" alt="Tumbler" /></a></li>
+            <li><a title="Facebook" class="tipsy" href="#"><img src="assets/images/facebook-icon.png" alt="Facebook" /></a></li>
+            <li><a title="Twitter" class="tipsy" href="#"><img src="assets/images/twitter-icon.png" alt="Twitter" /></a></li>
+
+        </ul><!-- End "social" -->
+
+    </div><!-- End "footer" -->
+
+<script type="text/javascript"> Cufon.now(); </script>
+<script>
+    function go() {
+        document.getElementById('lookup-form').onsubmit = function() {
+            window.location = '/user/' + document.getElementById('username').value;
+            return false;
+        };
+    }
+</script>
+
+</body>
+
 </html>
