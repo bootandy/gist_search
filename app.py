@@ -11,15 +11,23 @@ app = Flask(__name__)
 def user(user):
     if request.method == 'POST':
         search = request.form['search_term'].lower()
-        r = requests.get('https://api.github.com/users/'+user+'/gists')
+        
+        page = 1
+        gists = []
+        raw_gists = 'first'
+        
+        while raw_gists:
+            r = requests.get('https://api.github.com/users/'+user+'/gists?page=' + str(page))
+            page += 1
+            raw_gists = ''
+            
+            if r.ok:        
+                raw_gists = r.json()
+                for gist in raw_gists:
+                    if search in gist['files'].keys()[0].lower() or search in gist['description'].lower():
+                        gists.append(gist)
 
-        if r.ok:
-            gists = []
-            raw_gists = r.json()
-            for gist in raw_gists:
-                if search in gist['files'].keys()[0].lower() or search in gist['description'].lower():
-                    gists.append(gist)
-
+        if gists:
             return render_template('search.html', user=user, search_term=search, gists=gists)
         else:
             return ':-( something went wrong. I asked for: ' + r.url
